@@ -27,7 +27,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.GHCR_PAT }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
       -
         name: Checkout
         uses: actions/checkout@v3
