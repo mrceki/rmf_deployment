@@ -27,7 +27,7 @@ If you are planning to run a small local deployment and do not want to setup up 
 
 ```bash
 docker run --network=host \
--it ghcr.io/open-rmf/rmf_deployment_template/rmf-simulation:latest \
+-it rmf-hamal/rmf_deployment/rmf-simulation:latest \
 bash -c "ros2 launch rmf_demos_gz office.launch.xml \
 headless:=1 \
 server_uri:=ws://localhost:8000/_internal"
@@ -36,13 +36,13 @@ server_uri:=ws://localhost:8000/_internal"
 Run `rmf-api-server`
 ```bash
 docker run --network=host \
--it ghcr.io/open-rmf/rmf_deployment_template/rmf-web-rmf-server:latest
+-it rmf-hamal/rmf_deployment/rmf-web-rmf-server:latest
 ```
 
 Run `rmf-web-dashboard`
 ```bash
 docker run -p 3000:80 \
--it ghcr.io/open-rmf/rmf_deployment_template/rmf-web-dashboard-local:latest
+-it rmf-hamal/rmf_deployment/rmf-web-dashboard:latest
 ```
 
 Now access the dashboard with: http://localhost:3000/dashboard and try dispatch a task.
