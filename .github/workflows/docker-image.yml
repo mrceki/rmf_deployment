@@ -12,7 +12,7 @@ jobs:
     ## Configurations
     ##############################################################
     env:
-      builder_ns: rmf-hamal/rmf_deployment
+      builder_ns: ghcr.io/rmf-hamal/rmf_deployment
       base_registry: docker.io
       domain_url: rmf-deployment-template.open-rmf.org
       ros_distro: humble
