@@ -1,0 +1,5 @@
+repositories:
+  rmf-web:
+    type: git
+    url: https://github.com/mrceki/rmf-web.git
+    version: main
