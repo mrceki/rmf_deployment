@@ -81,7 +81,7 @@ jobs:
       # ###
       # build rmf simulation images
       # ###
-      - 
+      #- 
         #name: run vcs import rmf-simulation
         #run: |
         #  mkdir rmf-simulation-src
