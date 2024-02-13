@@ -75,7 +75,7 @@ jobs:
           build-args: |
             BUILDER_NS=${{ env.builder_ns }}
             TAG=${{ env.tag }}
-          push: true
+          # push: true
           tags: ${{ env.builder_ns }}/rmf:${{ env.tag }}
 
       # ###
@@ -95,7 +95,7 @@ jobs:
           build-args: |
             BUILDER_NS=${{ env.builder_ns }}
             TAG=${{ env.tag }}
-          push: true
+          # push: true
           tags: ${{ env.builder_ns }}/rmf-simulation:${{ env.tag }}
 
       # ###
@@ -126,7 +126,7 @@ jobs:
           build-args: |
             BUILDER_NS=${{ env.builder_ns }}
             TAG=${{ env.tag }}
-          push: true
+          # push: true
           tags: ${{ env.builder_ns }}/rmf-web-rmf-server:${{ env.tag }}
       -
         name: Build rmf-web-dashboard
@@ -139,7 +139,7 @@ jobs:
             TAG=${{ env.tag }}
             DOMAIN_URL=${{ env.domain_url }}
             BUILDER_NS=${{ env.builder_ns }}
-          push: true
+          # push: true
           tags: ${{ env.builder_ns }}/rmf-web-dashboard:${{ env.tag }}
       -
       ## Dashboard without custom url, use defaults env for react app
@@ -157,5 +157,5 @@ jobs:
             REACT_APP_RMF_SERVER=http://localhost:8000
             REACT_APP_AUTH_PROVIDER=
             REACT_APP_KEYCLOAK_CONFIG=
-          push: true
+          # push: true
           tags: ${{ env.builder_ns }}/rmf-web-dashboard-local:${{ env.tag }}
