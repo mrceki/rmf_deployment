@@ -82,21 +82,21 @@ jobs:
       # build rmf simulation images
       # ###
       - 
-        name: run vcs import rmf-simulation
-        run: |
-          mkdir rmf-simulation-src
-          vcs import rmf-simulation-src < rmf-simulation/rmf-simulation.repos
-      -
-        name: Build rmf-simulation
-        uses: docker/build-push-action@v3
-        with:
-          context: .
-          file: rmf-simulation/rmf-simulation.Dockerfile
-          build-args: |
-            BUILDER_NS=${{ env.builder_ns }}
-            TAG=${{ env.tag }}
+        #name: run vcs import rmf-simulation
+        #run: |
+        #  mkdir rmf-simulation-src
+        #  vcs import rmf-simulation-src < rmf-simulation/rmf-simulation.repos
+      #-
+        #name: Build rmf-simulation
+        #uses: docker/build-push-action@v3
+        #with:
+        #  context: .
+        #  file: rmf-simulation/rmf-simulation.Dockerfile
+        #  build-args: |
+        #    BUILDER_NS=${{ env.builder_ns }}
+        #    TAG=${{ env.tag }}
           # push: true
-          tags: ${{ env.builder_ns }}/rmf-simulation:${{ env.tag }}
+        #  tags: ${{ env.builder_ns }}/rmf-simulation:${{ env.tag }}
 
       # ###
       # build rmf web images
