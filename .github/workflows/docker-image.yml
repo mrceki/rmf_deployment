@@ -104,7 +104,7 @@ jobs:
       - 
         name: run vcs import rmf-web
         run: |
-          mkdir rmf-web-src
+          # mkdir rmf-web-src
           vcs import rmf-web-src < rmf-web/rmf-web.repos
       -
         name: Build builder-rmf-web
